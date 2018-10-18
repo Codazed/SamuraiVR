@@ -15,8 +15,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Bars
+    second: {fileID: 2100000, guid: 266f36f377f253043981ed9d65dad334, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Material
     second: {fileID: 2100000, guid: 6e8fef688ae82894da573056dab6f0ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Outside
+    second: {fileID: 2100000, guid: f31be36a660841b44be5a2c10bf98764, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
