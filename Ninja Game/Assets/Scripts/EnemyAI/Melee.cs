@@ -38,7 +38,7 @@ public class Melee : MonoBehaviour {
 
     void Attack()
     {
-        swordTransform = transform.FindChild("Sword Hilt");
+        swordTransform = transform.Find("Sword Hilt");
         swordTransform.transform.localRotation = Quaternion.Lerp(swordTransform.localRotation, Quaternion.Euler(new Vector3(90, 0, 30)), 0.01f);
         swordTransform.transform.localRotation = Quaternion.Lerp(swordTransform.localRotation, Quaternion.Euler(new Vector3(15, -180, 30)), 0.01f);
     }
