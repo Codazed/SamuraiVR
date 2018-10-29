@@ -711,7 +711,7 @@ PlayerSettings:
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 152326b4-5c38-4442-a3d5-7e3aeaf9161a
-  projectName: 
+  projectName: Ninja Game
   organizationId: chaspa97
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
