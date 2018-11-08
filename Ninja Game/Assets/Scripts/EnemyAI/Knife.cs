@@ -10,7 +10,7 @@ public class Knife : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        rb.AddForce((GameObject.FindWithTag("Player").transform.position - transform.position) * speed);
+        rb.AddForce((GameObject.FindWithTag("MainCamera").transform.position - transform.position) * speed);
     }
 
     // Update is called once per frame
