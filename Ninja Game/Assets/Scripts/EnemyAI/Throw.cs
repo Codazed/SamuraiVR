@@ -23,12 +23,12 @@ public class Throw : MonoBehaviour {
         choice = Random.Range(0, 2);
         if (choice == 0)
         {
-            Instantiate(knife);
+            Instantiate(knife, transform.position, transform.rotation);
         }
         else
         {
             //Instantiate(shuriken);
-            Instantiate(knife);
+            Instantiate(knife, transform.position, transform.rotation);
         }
         isWaiting = false;
     }
