@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4330433614409666}
   - component: {fileID: 33649244883938976}
   - component: {fileID: 23244670007056596}
-  - component: {fileID: 65066069654643142}
   - component: {fileID: 114477233733018042}
   - component: {fileID: 54202742150233624}
+  - component: {fileID: 65466862975182668}
   m_Layer: 0
   m_Name: Shuriken
   m_TagString: Untagged
@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1729963339273352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 375.9, y: 19, z: 566.3}
-  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 52eaa060da8e02b43ae2619c0a79050d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,7 +85,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1729963339273352}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 52eaa060da8e02b43ae2619c0a79050d, type: 3}
 --- !u!54 &54202742150233624
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -101,7 +101,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65066069654643142
+--- !u!65 &65466862975182668
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
