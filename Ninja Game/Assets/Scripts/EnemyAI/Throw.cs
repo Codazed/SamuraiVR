@@ -9,6 +9,10 @@ public class Throw : MonoBehaviour {
     private bool isWaiting = false;
     private int choice;
 
+    void Start() {
+        transform.LookAt(GameObject.FindWithTag("MainCamera").transform);
+    }
+
     void Update()
     {
         if (isWaiting == false) {
@@ -20,7 +24,8 @@ public class Throw : MonoBehaviour {
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(5);
-        choice = Random.Range(0, 2);
+        Instantiate(knife, transform.position, Quaternion.LookRotation(new Vector3(0,0,0)));
+        /*choice = Random.Range(0, 2);
         if (choice == 0)
         {
             Instantiate(knife, transform.position, transform.rotation);
@@ -29,7 +34,7 @@ public class Throw : MonoBehaviour {
         {
             //Instantiate(shuriken);
             Instantiate(knife, transform.position, transform.rotation);
-        }
+        }*/
         isWaiting = false;
     }
 }
