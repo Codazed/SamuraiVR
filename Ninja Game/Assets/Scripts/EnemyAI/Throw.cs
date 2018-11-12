@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+[RequireComponent(typeof(AudioSource))]
 public class Throw : MonoBehaviour {
 
     public GameObject knife;
     public GameObject shuriken;
-
+    public AudioSource audioData;
     private bool isWaiting = false;
     private int choice;
 
@@ -45,7 +45,9 @@ public class Throw : MonoBehaviour {
         {*/
             //Instantiate(shuriken);
             Instantiate(knife, spawnPos, transform.rotation);
-       // }
+        audioData = GetComponent<AudioSource>();
+        audioData.Play(0);
+        // }
         isWaiting = false;
     }
 }
