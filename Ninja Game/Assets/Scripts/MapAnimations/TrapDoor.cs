@@ -7,6 +7,7 @@ public class TrapDoor : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         transform.Rotate(Vector3.up * 90);
+        
     }
     void OnTriggerEnter(Collider otherObj)
     {

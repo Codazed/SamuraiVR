@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23592748198166424}
   - component: {fileID: 136799894178571862}
   - component: {fileID: 114467683675607228}
+  - component: {fileID: 114142045752728604}
   m_Layer: 0
   m_Name: RangedEnemy
   m_TagString: Untagged
@@ -58,7 +59,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 1408441ea787f3b45b7219dd20759f11, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,7 +85,19 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1951892209970094}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 32e7f9cd4ca9ba04fae86f8335c0ca19, type: 2}
+--- !u!114 &114142045752728604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1951892209970094}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07e30b99382f394cac618659abf64a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravity: 9.81
 --- !u!114 &114467683675607228
 MonoBehaviour:
   m_ObjectHideFlags: 1
