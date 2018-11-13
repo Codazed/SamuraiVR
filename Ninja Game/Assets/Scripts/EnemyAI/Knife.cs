@@ -33,5 +33,10 @@ public class Knife : MonoBehaviour
             audioData = GetComponent<AudioSource>();
             audioData.Play(0);
         }
+        if (otherObj.gameObject.tag == "Floor")
+        {
+            Destroy(gameObject);
+        }
     }
+    
 }
