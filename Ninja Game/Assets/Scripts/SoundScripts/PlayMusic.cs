@@ -35,5 +35,6 @@ public class PlayMusic : MonoBehaviour {
 
 // Update is called once per frame
 void Update() {
+        //here should be where a new song starts i believe
 }
 }

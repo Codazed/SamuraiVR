@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 [RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(Animator))]
 public class Throw : MonoBehaviour {
 
     public GameObject knife;
@@ -8,8 +9,8 @@ public class Throw : MonoBehaviour {
     public AudioSource audioData;
     private bool isWaiting = false;
     private int choice;
+    public Animator anim;
 
-    
 
     void Start() {
        // transform.LookAt(GameObject.FindWithTag("MainCamera").transform);
@@ -37,14 +38,18 @@ public class Throw : MonoBehaviour {
         yield return new WaitForSeconds(5);
         //Instantiate(knife, transform.position, Quaternion.LookRotation(new Vector3(0,0,0)));
         choice = Random.Range(0, 2);
-       /* if (choice == 0)
-        {
-            Instantiate(knife, transform.position, transform.rotation);
-        }
-        else
-        {*/
-            //Instantiate(shuriken);
-            Instantiate(knife, spawnPos, transform.rotation);
+        /* if (choice == 0)
+         {
+             Instantiate(knife, transform.position, transform.rotation);
+         }
+         else
+         {*/
+        //Instantiate(shuriken);
+      
+       
+
+        Instantiate(knife, spawnPos, transform.rotation);
+        
         audioData = GetComponent<AudioSource>();
         audioData.Play(0);
         // }

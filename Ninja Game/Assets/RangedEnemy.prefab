@@ -1930,6 +1930,7 @@ MonoBehaviour:
   knife: {fileID: 1729963339273352, guid: ca490d951ff265e4cbad6ffcef873864, type: 2}
   shuriken: {fileID: 1729963339273352, guid: ca490d951ff265e4cbad6ffcef873864, type: 2}
   audioData: {fileID: 82467135458304974}
+  anim: {fileID: 95942517271723770}
 --- !u!114 &114692177756178252
 MonoBehaviour:
   m_ObjectHideFlags: 1
