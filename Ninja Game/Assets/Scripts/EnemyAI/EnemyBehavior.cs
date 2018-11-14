@@ -20,7 +20,9 @@ public class EnemyBehavior : MonoBehaviour
     void Update()
     {
         // anim = GetComponent<Animator>();
-        transform.LookAt(GameObject.FindWithTag("MainCamera").transform.position);
+        var lookPos = GameObject.FindWithTag("MainCamera").transform.position;
+        lookPos.y = 0;
+        transform.LookAt(lookPos);
         anim.Play("Standard_Idle");
         //Fall
         /*  if (moveDirection.y > gravity * -1)
