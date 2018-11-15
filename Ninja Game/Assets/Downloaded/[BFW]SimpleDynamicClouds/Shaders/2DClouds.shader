@@ -3,7 +3,7 @@
 Shader "FStarVR/2DClouds" {
 	Properties {		 
 		_CloudColor ("Color", Color) = (1, 1, 1, .5)
-		_Density ("Density", Range(0.0, 2.0)) = 0.2
+		_Density ("Density", Range(0.0, 2.0)) =1
 		_Speed ("Speed", Range(-1.0, 1.0)) = 0.1
 		_ScatterMap0 ("Scatter Map 1", 2D) = "white" {}
 		_ScatterMap1 ("Scatter Map 2", 2D) = "white" {}

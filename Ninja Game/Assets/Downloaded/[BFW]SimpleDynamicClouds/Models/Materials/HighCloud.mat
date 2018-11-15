@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: HighCloud
   m_Shader: {fileID: 4800000, guid: ac2b0859971724c4f9138c653f11b8a0, type: 3}
@@ -92,7 +92,7 @@ Material:
     - _Brightness: 1
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _Density: 1.8
+    - _Density: 0.8
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
     - _Emptiness: 0.096
