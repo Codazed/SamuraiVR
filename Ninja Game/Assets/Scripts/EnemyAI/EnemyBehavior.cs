@@ -21,7 +21,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         // anim = GetComponent<Animator>();
         var lookPos = GameObject.FindWithTag("MainCamera").transform.position;
-        lookPos.y = 0;
+        lookPos.y = transform.position.y;
         transform.LookAt(lookPos);
         anim.Play("Standard_Idle");
         //Fall
