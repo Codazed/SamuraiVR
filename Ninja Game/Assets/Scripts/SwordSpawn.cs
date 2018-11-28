@@ -21,7 +21,7 @@ public class SwordSpawn : MonoBehaviour
         if (otherObj.gameObject.tag == "Head")
         {
             Instantiate(katana, transform.position, transform.rotation);
-            
+            Debug.Log("sword");
         }
     }
 }

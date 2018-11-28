@@ -36,11 +36,11 @@ public class Knife : MonoBehaviour
             //transform.position = Vector3.MoveTowards(transform.position, aPos, speed);
             audioData = GetComponent<AudioSource>();
             audioData.Play(0);
-            if (!collided) {
-                collided = true;
+          //  if (!collided) {
+            //    collided = true;
                 rb.velocity = -rb.velocity*4;
                 transform.Rotate(Vector3.right * 90);
-            }            
+          //  }            
             //rb.AddForce(new Vector3(speed * 2, speed * 2, speed * 2), ForceMode.VelocityChange);
         }
         if (otherObj.gameObject.tag == "Floor")
