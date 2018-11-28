@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(GameObject))]
 public class SwordSpawn : MonoBehaviour
 {
-    GameObject katana;
+    public GameObject katana;
     // Use this for initialization
     void Start()
     {
