@@ -16,7 +16,7 @@ public class SwordSpawn : MonoBehaviour
     {
 
     }
-    private void OnCollisionEnter(Collision otherObj)
+    private void OnTriggerEnter(Collider otherObj)
     {
         if (otherObj.gameObject.tag == "Head")
         {
