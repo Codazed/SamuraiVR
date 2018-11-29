@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VRTK;
 [RequireComponent(typeof(GameObject))]
 public class SwordSpawn : MonoBehaviour
 {
     public GameObject katana;
+    //public GameObject LeftController;
+    //public GameObject RightController;
     // Use this for initialization
     void Start()
     {
@@ -20,8 +23,15 @@ public class SwordSpawn : MonoBehaviour
     {
         if (otherObj.gameObject.tag == "Head")
         {
-            Instantiate(katana, transform.position, transform.rotation);
-            Debug.Log("sword");
+            if (GameObject.FindGameObjectsWithTag("Sword").Length < 2) 
+            {
+                
+                Instantiate(katana, transform.position, transform.rotation);
+                VRTK_InteractGrab myGrab = katana.GetComponent<VRTK_InteractGrab>();
+                myGrab.AttemptGrab();
+           //     LeftController.AttemptGrab();
+             //   RightController.AttemptGrab();
+            }
         }
     }
 }

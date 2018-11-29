@@ -25,7 +25,7 @@ public class Knife : MonoBehaviour
         //transform.position = Vector3.MoveTowards(transform.position, GameObject.FindWithTag("MainCamera").transform.position, speed);
         //Spins shuriken
         transform.Rotate(Vector3.forward * 20);
-        
+        GameObject.Destroy(gameObject, 15.0f);
     }
     private void OnCollisionEnter(Collision otherObj)
     {
