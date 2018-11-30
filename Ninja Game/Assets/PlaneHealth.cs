@@ -9,7 +9,7 @@ public class PlaneHealth : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        mat = GetComponent<MeshRenderer>().material.color;
+        mat = gameObject.GetComponent<Renderer>().material.color;
         s = GameObject.Find("SwordSpawn").GetComponent<PlayerHealth>();
 	}
 	
