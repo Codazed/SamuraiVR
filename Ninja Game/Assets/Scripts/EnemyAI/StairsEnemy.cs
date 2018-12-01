@@ -14,7 +14,7 @@ public class StairsEnemy : MonoBehaviour {
     void Update() {
         count = count + 1;
         if (count >= 1200) {
-            if (transform.position.y > .1) {
+            if (transform.position.y > .3) {
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y - 7, transform.position.z), 50 * Time.deltaTime);
             }
         }
