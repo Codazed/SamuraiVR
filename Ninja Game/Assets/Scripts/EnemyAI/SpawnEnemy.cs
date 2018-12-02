@@ -18,7 +18,9 @@ public class SpawnEnemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (count < 2)
+        count = GameObject.FindGameObjectsWithTag("Enemy").Length;
+
+        while (count < 2)
         {
             random = Random.Range(0,3);
             if ((random == 0) && (doorenemycount == 0))

@@ -24,12 +24,13 @@ public class EnemyBehavior : MonoBehaviour
         lookPos.y = transform.position.y;
         transform.LookAt(lookPos);
         anim.Play("Standard_Idle");
-        //Fall
-        /*  if (moveDirection.y > gravity * -1)
-          {
-              moveDirection.y -= gravity * Time.deltaTime;
-          }
-          transform.Translate(moveDirection * Time.deltaTime);
-      }*/
+    
     }
+   /* private void OnTriggerEnter(Collider otherObj)
+    {
+        if (otherObj.gameObject.tag == "Shuriken"){
+            Debug.Log("hit");
+            Destroy(gameObject);
+        }
+    }*/
 }
