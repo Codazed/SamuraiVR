@@ -18,5 +18,22 @@ public class StairsEnemy : MonoBehaviour {
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y - 7, transform.position.z), 50 * Time.deltaTime);
             }
         }
+        if (transform.position.y <= .3)
+        {
+            float dist = Vector3.Distance(GameObject.FindWithTag("MainCamera").transform.position, transform.position);
+
+            if (dist > 25)
+            {
+                var lookPos = GameObject.FindWithTag("MainCamera").transform.position;
+                lookPos.y = transform.position.y;
+                transform.position = Vector3.MoveTowards(transform.position, lookPos, 1 * Time.deltaTime);
+            }
+            if (dist < 24)
+            {
+                var lookPos = GameObject.FindWithTag("MainCamera").transform.position;
+                lookPos.y = transform.position.y;
+                transform.position = Vector3.MoveTowards(transform.position, lookPos, -2 * Time.deltaTime);
+            }
+        }
     }
 }
