@@ -9,6 +9,7 @@ public class Trapdoorenemy : MonoBehaviour {
     public GameObject shuriken;
     // Use this for initialization
     void Start () {
+        transform.position = new Vector3(392.3f, -14, 561.7f);
 	}
 
     // Update is called once per frame

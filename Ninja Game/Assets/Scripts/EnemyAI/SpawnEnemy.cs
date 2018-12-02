@@ -1,0 +1,44 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SpawnEnemy : MonoBehaviour {
+    public GameObject DoorEnemy;
+    public GameObject StairsEnemy;
+    public GameObject TrapdoorEnemy;
+    int count = 0;
+    int doorenemycount = 0;
+    int stairsenemycount = 0;
+    int trapdoorenemycount = 0;
+    int random = 0;
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+        if (count < 2)
+        {
+            random = Random.Range(0,3);
+            if ((random == 0) && (doorenemycount == 0))
+            {
+                Instantiate(DoorEnemy, transform.position, transform.rotation);
+                count++;
+                doorenemycount++;
+            }
+            if ((random == 1) && (stairsenemycount==0))
+            {
+                Instantiate(StairsEnemy, transform.position, transform.rotation);
+                count++;
+                stairsenemycount++;
+            }
+            if ((random == 2) && (trapdoorenemycount==0))
+            {
+                Instantiate(TrapdoorEnemy, transform.position, transform.rotation);
+                count++;
+                trapdoorenemycount++;
+            }
+        }
+    }
+}

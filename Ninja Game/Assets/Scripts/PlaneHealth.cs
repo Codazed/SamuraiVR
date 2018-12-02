@@ -16,8 +16,7 @@ public class PlaneHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //Debug.Log(s.hp);
-        Debug.Log(mat.a);
+        
         if (s.hp == 5) {
             newAlpha = 0;
         } else {

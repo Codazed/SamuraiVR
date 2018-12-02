@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DoorEnemy : MonoBehaviour {
-    public GameObject player;
 	// Use this for initialization
 	void Start () {
-		
-	}
+        transform.position = new Vector3(418.32f, .61f, 632.51f);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -15,14 +14,14 @@ public class DoorEnemy : MonoBehaviour {
         float dist = Vector3.Distance(GameObject.FindWithTag("MainCamera").transform.position, transform.position);
 
         if (dist > 25){
-            var lookPos = player.transform.position;
+            var lookPos = GameObject.FindWithTag("MainCamera").transform.position;
             lookPos.y = transform.position.y;
             transform.position = Vector3.MoveTowards(transform.position, lookPos, 1 * Time.deltaTime);
         }
         if (dist < 24) {
-            var lookPos = player.transform.position;
+            var lookPos = GameObject.FindWithTag("MainCamera").transform.position;
             lookPos.y = transform.position.y;
-            transform.position = Vector3.MoveTowards(transform.position, lookPos, -1 * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, lookPos, -2 * Time.deltaTime);
         }
 
     }

@@ -7,8 +7,8 @@ public class StairsEnemy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        transform.position = new Vector3(375.77f, 40.7f, 605.53f);
+    }
 
     // Update is called once per frame
     void Update() {
