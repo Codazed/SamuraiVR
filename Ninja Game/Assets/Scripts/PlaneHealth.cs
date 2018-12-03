@@ -38,7 +38,8 @@ public class PlaneHealth : MonoBehaviour {
             a.height = Screen.height;
              a.width = Screen.width;
     
-            GUI.Label(a, "GameOver \n ゲームオーバー", guiStyle);
+            GUI.Label(a, "GameOver \n ゲームオーバー\n Kills: " + SpawnEnemy.killcount, guiStyle);
+            Time.timeScale = 0;
         }
     }
 

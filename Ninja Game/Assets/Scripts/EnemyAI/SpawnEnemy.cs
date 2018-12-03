@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour {
+    public static int killcount = 0;
+
     public GameObject DoorEnemy;
     public GameObject StairsEnemy;
     public GameObject TrapdoorEnemy;

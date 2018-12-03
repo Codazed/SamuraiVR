@@ -30,6 +30,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         if (otherObj.gameObject.tag == "Shuriken"){
             Debug.Log("hit");
+            SpawnEnemy.killcount++;
             Destroy(gameObject);
         }
     }
