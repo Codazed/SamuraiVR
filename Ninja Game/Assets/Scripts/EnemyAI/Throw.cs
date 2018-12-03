@@ -10,6 +10,9 @@ public class Throw : MonoBehaviour {
     private bool isWaiting = false;
     private int choice;
     public Animator anim;
+    float spawnDistance = 5;
+    bool throwstar = false;
+    int throwcount = 0;
  //   public Animator anim;
 
 
@@ -19,7 +22,22 @@ public class Throw : MonoBehaviour {
 
     void Update(){
 
-
+        if (throwstar == true)
+        {
+            throwcount++;
+            if (throwcount >= 70)
+            {
+                Vector3 playerPos = transform.position;
+                Vector3 playerDirection = transform.forward;
+                Quaternion playerRotation = transform.rotation;
+                Vector3 spawnPos = playerPos + playerDirection * spawnDistance;
+                Instantiate(knife, spawnPos, transform.rotation);
+                audioData = GetComponent<AudioSource>();
+                audioData.Play(0);
+                throwcount = 0;
+                throwstar = false;
+            }
+        }
 
         if (isWaiting == false) {
             isWaiting = true;
@@ -30,11 +48,11 @@ public class Throw : MonoBehaviour {
     IEnumerator Timer()
     {
 
-        Vector3 playerPos = transform.position;
-        Vector3 playerDirection = transform.forward;
-        Quaternion playerRotation = transform.rotation;
-        float spawnDistance = 4;
-        Vector3 spawnPos = playerPos + playerDirection * spawnDistance;
+       // Vector3 playerPos = transform.position;
+       // Vector3 playerDirection = transform.forward;
+       // Quaternion playerRotation = transform.rotation;
+  
+        //Vector3 spawnPos = playerPos + playerDirection * spawnDistance;
         
         yield return new WaitForSeconds(5);
         //Instantiate(knife, transform.position, Quaternion.LookRotation(new Vector3(0,0,0)));
@@ -49,11 +67,11 @@ public class Throw : MonoBehaviour {
 
 
         anim.Play("Default Take");
-        Instantiate(knife, spawnPos, transform.rotation);
-        
-        audioData = GetComponent<AudioSource>();
-        audioData.Play(0);
+        throwstar = true;
+       
         // }
         isWaiting = false;
+        
     }
-}
+    }
+

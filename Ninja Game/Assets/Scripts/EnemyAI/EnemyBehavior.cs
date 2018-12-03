@@ -26,11 +26,11 @@ public class EnemyBehavior : MonoBehaviour
         //nim.Play("Standard_Idle");
     
     }
-   /*private void OnCollisionEnter(Collision otherObj)
+   private void OnCollisionEnter(Collision otherObj)
     {
         if (otherObj.gameObject.tag == "Shuriken"){
             Debug.Log("hit");
             Destroy(gameObject);
         }
-    }*/
+    }
 }

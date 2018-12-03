@@ -8,7 +8,7 @@ public class Trapdoorenemy : MonoBehaviour {
     public AudioSource audioData;
     public GameObject shuriken;
     public Animator anim;
-    float spawnDistance = 4;
+    float spawnDistance = 5;
     
     int throwcount = 0;
     bool throwstar=false;
