@@ -25,7 +25,7 @@ public class Throw : MonoBehaviour {
         if (throwstar == true)
         {
             throwcount++;
-            if (throwcount >= 70)
+            if (throwcount >= 65)
             {
                 Vector3 playerPos = transform.position;
                 Vector3 playerDirection = transform.forward;

@@ -7,18 +7,18 @@ public class StairsEnemy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        transform.position = new Vector3(375.77f, 40.7f, 605.53f);
+        transform.position = new Vector3(375.77f, 42.61f, 605.53f);
     }
 
     // Update is called once per frame
     void Update() {
         count = count + 1;
         if (count >= 1200) {
-            if (transform.position.y > .3) {
+            if (transform.position.y > .61) {
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y - 7, transform.position.z), 50 * Time.deltaTime);
             }
         }
-        if (transform.position.y <= .3)
+        if (transform.position.y <= .61)
         {
             float dist = Vector3.Distance(GameObject.FindWithTag("MainCamera").transform.position, transform.position);
 

@@ -26,6 +26,10 @@ public class Knife : MonoBehaviour
         //Spins shuriken
         transform.Rotate(Vector3.forward * 20);
         GameObject.Destroy(gameObject, 15.0f);
+        if (Time.timeScale == 0)
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnCollisionEnter(Collision otherObj)
     {
@@ -47,10 +51,12 @@ public class Knife : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (otherObj.gameObject.tag == "MainCamera")
+        if (otherObj.gameObject.tag == "Head")
         {
             Destroy(gameObject);
+          
         }
+
     }
     
 }
