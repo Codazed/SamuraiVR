@@ -1795,6 +1795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: 9.81
   otherObject: {fileID: 0}
+  Smoke: {fileID: 1504608520537754, guid: f86cd8aa444c05446828a6e34422f950, type: 2}
 --- !u!136 &136430408227706864
 CapsuleCollider:
   m_ObjectHideFlags: 1

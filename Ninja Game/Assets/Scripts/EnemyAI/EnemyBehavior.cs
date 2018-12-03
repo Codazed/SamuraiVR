@@ -8,6 +8,7 @@ public class EnemyBehavior : MonoBehaviour
     public float gravity = 9.81f;
     private Vector3 moveDirection = Vector3.zero;
     public GameObject otherObject;
+    public GameObject Smoke;
    // public Animator anim;
 
     // Use this for initialization
@@ -31,6 +32,14 @@ public class EnemyBehavior : MonoBehaviour
         if (otherObj.gameObject.tag == "Shuriken"){
             Debug.Log("hit");
             SpawnEnemy.killcount++;
+            Instantiate(Smoke,transform.position, new Quaternion(0,0,0,0));
+            Destroy(gameObject);
+        }
+        if (otherObj.gameObject.tag == "Sword")
+        {
+            Debug.Log("hit");
+            SpawnEnemy.killcount++;
+            Instantiate(Smoke, transform.position, new Quaternion(0, 0, 0, 0));
             Destroy(gameObject);
         }
     }

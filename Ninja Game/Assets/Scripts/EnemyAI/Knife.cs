@@ -47,6 +47,10 @@ public class Knife : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (otherObj.gameObject.tag == "MainCamera")
+        {
+            Destroy(gameObject);
+        }
     }
     
 }

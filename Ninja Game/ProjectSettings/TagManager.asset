@@ -12,6 +12,7 @@ TagManager:
   - DoorEnemy
   - StairsEnemy
   - TrapdoorEnemy
+  - Smoke
   layers:
   - Default
   - TransparentFX
