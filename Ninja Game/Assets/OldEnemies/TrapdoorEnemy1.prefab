@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 82409191694710160}
   - component: {fileID: 114593660231299710}
   m_Layer: 0
-  m_Name: TrapdoorEnemy
+  m_Name: TrapdoorEnemy1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

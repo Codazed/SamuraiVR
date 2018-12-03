@@ -8,12 +8,12 @@ public class EnemyBehavior : MonoBehaviour
     public float gravity = 9.81f;
     private Vector3 moveDirection = Vector3.zero;
     public GameObject otherObject;
-    public Animator anim;
+   // public Animator anim;
 
     // Use this for initialization
     void Start()
     {
-        anim.Play("Standard_Idle");
+       // anim.Play("Standard_Idle");
     }
 
     // Update is called once per frame
@@ -23,10 +23,10 @@ public class EnemyBehavior : MonoBehaviour
         var lookPos = GameObject.FindWithTag("MainCamera").transform.position;
         lookPos.y = transform.position.y;
         transform.LookAt(lookPos);
-        anim.Play("Standard_Idle");
+        //nim.Play("Standard_Idle");
     
     }
-   /* private void OnTriggerEnter(Collider otherObj)
+   /*private void OnCollisionEnter(Collision otherObj)
     {
         if (otherObj.gameObject.tag == "Shuriken"){
             Debug.Log("hit");

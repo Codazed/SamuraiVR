@@ -9,6 +9,9 @@ TagManager:
   - Floor
   - Head
   - Shuriken
+  - DoorEnemy
+  - StairsEnemy
+  - TrapdoorEnemy
   layers:
   - Default
   - TransparentFX

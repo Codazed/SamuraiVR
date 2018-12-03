@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 [RequireComponent(typeof(AudioSource))]
-[RequireComponent(typeof(Animator))]
+//[RequireComponent(typeof(Animator))]
 public class Throw : MonoBehaviour {
 
     public GameObject knife;
@@ -10,6 +10,7 @@ public class Throw : MonoBehaviour {
     private bool isWaiting = false;
     private int choice;
     public Animator anim;
+ //   public Animator anim;
 
 
     void Start() {
@@ -32,7 +33,7 @@ public class Throw : MonoBehaviour {
         Vector3 playerPos = transform.position;
         Vector3 playerDirection = transform.forward;
         Quaternion playerRotation = transform.rotation;
-        float spawnDistance = 3;
+        float spawnDistance = 4;
         Vector3 spawnPos = playerPos + playerDirection * spawnDistance;
         
         yield return new WaitForSeconds(5);
@@ -45,9 +46,9 @@ public class Throw : MonoBehaviour {
          else
          {*/
         //Instantiate(shuriken);
-      
-       
 
+
+        anim.Play("Default Take");
         Instantiate(knife, spawnPos, transform.rotation);
         
         audioData = GetComponent<AudioSource>();

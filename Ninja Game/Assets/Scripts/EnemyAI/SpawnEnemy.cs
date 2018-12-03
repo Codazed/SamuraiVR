@@ -19,10 +19,13 @@ public class SpawnEnemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         count = GameObject.FindGameObjectsWithTag("Enemy").Length;
-
+        doorenemycount = GameObject.FindGameObjectsWithTag("DoorEnemy").Length;
+        stairsenemycount = GameObject.FindGameObjectsWithTag("StairsEnemy").Length;
+        trapdoorenemycount = GameObject.FindGameObjectsWithTag("TrapdoorEnemy").Length;
         while (count < 2)
         {
             random = Random.Range(0,3);
+           
             if ((random == 0) && (doorenemycount == 0))
             {
                 Instantiate(DoorEnemy, transform.position, transform.rotation);

@@ -7,6 +7,11 @@ public class Trapdoorenemy : MonoBehaviour {
     private bool moveup;
     public AudioSource audioData;
     public GameObject shuriken;
+    public Animator anim;
+    float spawnDistance = 4;
+    
+    int throwcount = 0;
+    bool throwstar=false;
     // Use this for initialization
     void Start () {
         transform.position = new Vector3(392.3f, -14, 561.7f);
@@ -37,10 +42,29 @@ public class Trapdoorenemy : MonoBehaviour {
         }
         if (transform.position.y >= 0) {
             moveup = false;
-            Instantiate(shuriken, transform.position, transform.rotation);
+            
+            anim.Play("Default Take");
+            throwstar = true;
+            
 
-            audioData = GetComponent<AudioSource>();
-            audioData.Play(0);
+        }
+        if (throwstar == true)
+        {
+            throwcount++;
+            if (throwcount >= 70)
+            {
+                Vector3 playerPos = transform.position;
+                Vector3 playerDirection = transform.forward;
+                Quaternion playerRotation = transform.rotation;
+                Vector3 spawnPos = playerPos + playerDirection * spawnDistance;
+                Instantiate(shuriken, spawnPos, transform.rotation);
+                audioData = GetComponent<AudioSource>();
+                audioData.Play(0);
+                throwcount = 0;
+                throwstar = false;
+            }
         }
     }
+   
+
 }
