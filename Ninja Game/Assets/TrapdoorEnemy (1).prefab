@@ -1767,8 +1767,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravity: 9.81
-  otherObject: {fileID: 0}
   Smoke: {fileID: 1504608520537754, guid: f86cd8aa444c05446828a6e34422f950, type: 2}
+  sword: {fileID: 1535427535446404, guid: 1ebbd68b287c71640b968988600fbbc9, type: 2}
 --- !u!114 &114667284686414398
 MonoBehaviour:
   m_ObjectHideFlags: 1

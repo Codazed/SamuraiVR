@@ -13,7 +13,6 @@ public class PlayMusic : MonoBehaviour {
 
         //This script picks a random song from our playlist
         choice = Random.Range(0, 4);
-        Debug.Log(choice);
         if (choice == 0)
         {
             gameObjectToEnable.SetActive(true);
