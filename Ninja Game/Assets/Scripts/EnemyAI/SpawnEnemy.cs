@@ -15,7 +15,7 @@ public class SpawnEnemy : MonoBehaviour {
     int random = 0;
 	// Use this for initialization
 	void Start () {
-		
+        killcount = 0;
 	}
 	
 	// Update is called once per frame

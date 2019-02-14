@@ -13,8 +13,7 @@ public class PlayerHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //Debug.Log("Health= " + hp);
-        if (count == 1200){
+        if (count == 1200 && hp > 0){
             hp = hp + 1;
         }
         if (count <= 1250)

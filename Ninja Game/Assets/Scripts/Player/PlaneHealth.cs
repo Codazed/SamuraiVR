@@ -35,6 +35,7 @@ public class PlaneHealth : MonoBehaviour {
             a.y = 150;
             guiStyle.fontSize = 60;
             guiStyle.font = (Font)Resources.Load("mangatb");
+            guiStyle.alignment = TextAnchor.MiddleCenter;
             a.height = Screen.height;
              a.width = Screen.width;
     

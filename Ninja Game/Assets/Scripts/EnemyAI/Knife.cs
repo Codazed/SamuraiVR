@@ -42,7 +42,7 @@ public class Knife : MonoBehaviour
             audioData.Play(0);
           //  if (!collided) {
             //    collided = true;
-                rb.velocity = -rb.velocity*4;
+                rb.velocity = -rb.velocity*5;
                 transform.Rotate(Vector3.right * 90);
           //  }            
             //rb.AddForce(new Vector3(speed * 2, speed * 2, speed * 2), ForceMode.VelocityChange);
